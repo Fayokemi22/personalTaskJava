@@ -29,14 +29,24 @@ class CalculatorTest {
     void dividesTwoNumbers() {
         assertEquals(3, calculator.divide(6, 2));
     }
+//OR
+//    @Test
+//    void throwsWhenDividingByZero() {
+//        Exception e = assertThrows(IllegalArgumentException.class,
+//                () -> calculator.divide(5, 0));
+//        assertEquals("Cannot divide by zero", e.getMessage());
+//    }
+
 
     @Test
     void throwsWhenDividingByZero() {
-        Exception e = assertThrows(IllegalArgumentException.class,
-                () -> calculator.divide(5, 0));
-        assertEquals("Cannot divide by zero", e.getMessage());
+        try {
+            calculator.divide(5, 0);
+            fail("Expected an IllegalArgumentException but nothing was thrown");
+        } catch (IllegalArgumentException e) {
+            assertEquals("Cannot divide by zero", e.getMessage());
+        }
     }
-
     @Test
     void handlesNegativeNumbers() {
         assertEquals(-5, calculator.add(-2, -3));
