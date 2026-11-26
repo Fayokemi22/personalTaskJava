@@ -11,7 +11,7 @@ class TwoNumbersTest {
     }
 
 @Test
-  void testThatThreeNumberCanBeAddedAndAlsoTheAverageCanBeKnown(){
+  void testThatThreeNumberCanBeAdded(){
 int firstNumber = 4;
 int secondNumber =9;
 int thirdNumber = 2;
@@ -22,5 +22,21 @@ assertEquals(15, numbers.add(firstNumber,secondNumber, thirdNumber));
     void testThatAverageOfThreeNumbersCanBeKnown(){
 
     assertEquals(5.0,numbers.average(4,9,2));
+    }
+
+    @Test
+    void testTheAverageOfAGivenNumber(){
+        int firstNumber = 4;
+        int secondNumber =9;
+        int thirdNumber = 2;
+        assertEquals(5,numbers.average(4,9,2));
+    }
+    @Test
+    void testThatThreeNumbersCanBeMultiply(){
+        int firstNumber = 4;
+        int secondNumber =9;
+        int thirdNumber = 2;
+
+        assertEquals(72,numbers.multiply(4,9,2));
     }
 }
