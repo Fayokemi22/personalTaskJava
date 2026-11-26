@@ -40,3 +40,5 @@ assertEquals(15, numbers.add(firstNumber,secondNumber, thirdNumber));
         assertEquals(72,numbers.multiply(4,9,2));
     }
 }
+
+
